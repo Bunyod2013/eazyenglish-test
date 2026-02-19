@@ -17,7 +17,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -28,7 +27,6 @@ import {
   Volume2,
   Mail,
   Lock,
-  Star,
   Check,
   X,
   Loader2,
@@ -517,13 +515,6 @@ export function LandingPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="space-y-8">
-              <FadeIn>
-                <Badge className="border-amber-200 bg-amber-100 px-4 py-2 text-sm text-amber-800 transition-transform duration-200 hover:scale-105">
-                  <Zap className="size-4" />
-                  {t.hero.badge}
-                </Badge>
-              </FadeIn>
-
               <FadeIn delay={100}>
                 <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
                   {t.hero.titleLine1}{" "}
@@ -547,35 +538,6 @@ export function LandingPage() {
                     {t.hero.cta}
                   </a>
                 </Button>
-              </FadeIn>
-
-              <FadeIn delay={400}>
-                <div className="flex items-center gap-8 pt-4">
-                  <div>
-                    <div className="text-2xl font-bold">45M+</div>
-                    <div className="text-sm text-muted-foreground">
-                      {t.hero.students}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1 text-2xl font-bold">
-                      4.8
-                      <Star className="size-5 fill-amber-400 text-amber-400" />
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {t.hero.appStore}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1 text-2xl font-bold">
-                      4.7
-                      <Star className="size-5 fill-amber-400 text-amber-400" />
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      {t.hero.googlePlay}
-                    </div>
-                  </div>
-                </div>
               </FadeIn>
             </div>
 
