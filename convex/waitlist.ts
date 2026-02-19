@@ -28,3 +28,21 @@ export const getCount = query({
     return entries.length;
   },
 });
+
+export const getAll = query({
+  handler: async (ctx) => {
+    const entries = await ctx.db.query("waitlist").order("desc").collect();
+    return entries.map((e) => ({
+      id: e._id,
+      email: e.email,
+      createdAt: e.createdAt,
+    }));
+  },
+});
+
+export const remove = mutation({
+  args: { id: v.id("waitlist") },
+  handler: async (ctx, args) => {
+    await ctx.db.delete(args.id);
+  },
+});
