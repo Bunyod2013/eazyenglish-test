@@ -9,7 +9,7 @@ export const useConvexReady = () => useContext(ConvexReadyContext);
 export function ConvexClientProvider({ children }: { children: ReactNode }) {
   const client = useMemo(() => {
     try {
-      const url = process.env.NEXT_PUBLIC_CONVEX_URL;
+      const url = process.env.NEXT_PUBLIC_CONVEX_URL || "https://chatty-heron-436.convex.cloud";
       if (!url) return null;
       return new ConvexReactClient(url);
     } catch {
