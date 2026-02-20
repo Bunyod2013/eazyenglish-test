@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, type ReactNode } from "react";
+import { useState, useEffect, useRef, Component, type ReactNode } from "react";
 import { useMutation, useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useConvexReady } from "@/components/convex-provider";
@@ -129,9 +129,29 @@ function AnimatedProgress({
 }
 
 /* ────────────────────────────────────────────
+   Error boundary for Convex components
+   ──────────────────────────────────────────── */
+class ConvexErrorBoundary extends Component<
+  { fallback: ReactNode; children: ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { fallback: ReactNode; children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) return this.props.fallback;
+    return this.props.children;
+  }
+}
+
+/* ────────────────────────────────────────────
    Waitlist form (Convex-backed)
    ──────────────────────────────────────────── */
-function ConvexWaitlistForm({ t }: { t: TranslationSet }) {
+function ConvexWaitlistFormInner({ t }: { t: TranslationSet }) {
   const count = useQuery(api.waitlist.getCount);
   const joinWaitlist = useMutation(api.waitlist.join);
 
@@ -146,6 +166,14 @@ function ConvexWaitlistForm({ t }: { t: TranslationSet }) {
           : { ok: false as const, reason: "already_exists" as const };
       }}
     />
+  );
+}
+
+function ConvexWaitlistForm({ t }: { t: TranslationSet }) {
+  return (
+    <ConvexErrorBoundary fallback={<StaticWaitlistForm t={t} />}>
+      <ConvexWaitlistFormInner t={t} />
+    </ConvexErrorBoundary>
   );
 }
 
