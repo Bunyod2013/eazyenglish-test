@@ -30,6 +30,7 @@ import {
   Check,
   X,
   Loader2,
+  Clock,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -379,7 +380,7 @@ function ExerciseCard({ t }: { t: TranslationSet }) {
               checkPhase !== "idle" && "pointer-events-none"
             )}
           >
-            Доброе утро
+            Xayrli tong
           </button>
         </div>
 
@@ -459,7 +460,7 @@ export function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ── Header ── */}
-      <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 border-b border-white/20 bg-white/40 backdrop-blur-xl backdrop-saturate-150 shadow-[0_4px_30px_rgba(0,0,0,0.05)]">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-brand text-sm font-bold text-white">
@@ -491,7 +492,7 @@ export function LandingPage() {
             </a>
           </nav>
 
-          <div className="flex items-center rounded-full bg-muted p-1">
+          <div className="flex items-center rounded-full bg-white/50 p-1 backdrop-blur-sm border border-white/30">
             {LANGUAGES.map((l) => (
               <button
                 key={l}
@@ -690,6 +691,24 @@ export function LandingPage() {
               </Card>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* ── Coming Soon Section ── */}
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center">
+            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-5 py-2 text-sm font-medium text-brand">
+              <Clock className="size-4" />
+              {t.comingSoon.timeline}
+            </div>
+            <h2 className="mt-6 text-3xl font-bold sm:text-4xl">
+              {t.comingSoon.heading}
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {t.comingSoon.description}
+            </p>
+          </FadeIn>
         </div>
       </section>
 

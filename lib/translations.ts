@@ -31,6 +31,11 @@ type TranslationSet = {
     incorrect: string;
     selectAnswer: string;
   };
+  mission: {
+    heading: string;
+    line1: string;
+    line2: string;
+  };
   features: {
     heading: string;
     gamifiedTitle: string;
@@ -47,6 +52,31 @@ type TranslationSet = {
   };
   leaderboard: {
     heading: string;
+  };
+  howItWorks: {
+    heading: string;
+    step1Title: string;
+    step1Desc: string;
+    step2Title: string;
+    step2Desc: string;
+    step3Title: string;
+    step3Desc: string;
+  };
+  comingSoon: {
+    heading: string;
+    description: string;
+    timeline: string;
+  };
+  faq: {
+    heading: string;
+    q1: string;
+    a1: string;
+    q2: string;
+    a2: string;
+    q3: string;
+    a3: string;
+    q4: string;
+    a4: string;
   };
   subscribe: {
     heading: string;
@@ -90,6 +120,11 @@ export const translations: Record<Language, TranslationSet> = {
       incorrect: "Noto'g'ri!",
       selectAnswer: "Javobni tanlang",
     },
+    mission: {
+      heading: "Nega biz buni qilyapmiz?",
+      line1: "O'zbeklar ingliz tilini o'rganishda qiynaladi.",
+      line2: "Biz o'yin orqali gapirishni oson qilmoqchimiz.",
+    },
     features: {
       heading: "Nima uchun EazyEnglish?",
       gamifiedTitle: "O'yinlashtirilgan darslar",
@@ -108,6 +143,31 @@ export const translations: Record<Language, TranslationSet> = {
     },
     leaderboard: {
       heading: "Haftalik leaderboard",
+    },
+    howItWorks: {
+      heading: "Qanday ishlaydi?",
+      step1Title: "Ro'yxatdan o'ting",
+      step1Desc: "Email manzilingizni qoldiring va biz sizga birinchi bo'lib xabar beramiz",
+      step2Title: "Ilovani yuklab oling",
+      step2Desc: "Ilova tayyor bo'lganda App Store yoki Google Play'dan yuklab oling",
+      step3Title: "O'ynab o'rganing",
+      step3Desc: "Kuniga 15 daqiqa o'yin o'ynang va ingliz tilida gapiring",
+    },
+    comingSoon: {
+      heading: "Tez kunda",
+      description: "Biz hozir ilovani yaratish ustida ishlamoqdamiz. Birinchilardan bo'lib sinab ko'rish uchun ro'yxatga yoziling.",
+      timeline: "2026-yil bahorida chiqadi",
+    },
+    faq: {
+      heading: "Ko'p so'raladigan savollar",
+      q1: "EazyEnglish bepulmi?",
+      a1: "Ha! Asosiy funksiyalar butunlay bepul. Premium imkoniyatlar uchun obuna mavjud bo'ladi.",
+      q2: "Qaysi darajadagilar uchun?",
+      a2: "Boshlang'ich darajadan tortib o'rta darajagacha. Noldan boshlovchilar uchun ham qulay.",
+      q3: "Kuniga qancha vaqt kerak?",
+      a3: "Kuniga atigi 15 daqiqa yetarli. Qisqa darslar bilan jadval bo'yicha o'rganasiz.",
+      q4: "Qachon chiqadi?",
+      a4: "2026-yil bahorida chiqishi rejalashtirilgan. Ro'yxatga yoziling — birinchi bo'lib bilasiz!",
     },
     subscribe: {
       heading: "Birinchi bo'lib sinab ko'ring!",
@@ -153,6 +213,11 @@ export const translations: Record<Language, TranslationSet> = {
       incorrect: "Incorrect!",
       selectAnswer: "Select an answer",
     },
+    mission: {
+      heading: "Why are we doing this?",
+      line1: "Uzbeks struggle with learning English.",
+      line2: "We want to make speaking easy through games.",
+    },
     features: {
       heading: "Why EazyEnglish?",
       gamifiedTitle: "Gamified lessons",
@@ -169,6 +234,31 @@ export const translations: Record<Language, TranslationSet> = {
     },
     leaderboard: {
       heading: "Weekly leaderboard",
+    },
+    howItWorks: {
+      heading: "How does it work?",
+      step1Title: "Sign up",
+      step1Desc: "Leave your email and we'll notify you first when it's ready",
+      step2Title: "Download the app",
+      step2Desc: "Get it from the App Store or Google Play as soon as it launches",
+      step3Title: "Learn by playing",
+      step3Desc: "Play for 15 minutes a day and start speaking English",
+    },
+    comingSoon: {
+      heading: "Coming soon",
+      description: "We're currently building the app. Sign up to be among the first to try it.",
+      timeline: "Launching spring 2026",
+    },
+    faq: {
+      heading: "Frequently asked questions",
+      q1: "Is EazyEnglish free?",
+      a1: "Yes! Core features are completely free. Premium features will be available via subscription.",
+      q2: "What level is it for?",
+      a2: "From beginner to intermediate. Perfect even for complete beginners.",
+      q3: "How much time per day?",
+      a3: "Just 15 minutes a day is enough. Short lessons that fit your schedule.",
+      q4: "When does it launch?",
+      a4: "Planned for spring 2026. Sign up to the waitlist — you'll be the first to know!",
     },
     subscribe: {
       heading: "Be the first to try it!",
@@ -212,6 +302,11 @@ export const translations: Record<Language, TranslationSet> = {
       incorrect: "Неправильно!",
       selectAnswer: "Выберите ответ",
     },
+    mission: {
+      heading: "Почему мы это делаем?",
+      line1: "Узбекистанцам сложно учить английский.",
+      line2: "Мы хотим сделать разговорную речь лёгкой через игры.",
+    },
     features: {
       heading: "Почему EazyEnglish?",
       gamifiedTitle: "Игровые уроки",
@@ -230,6 +325,31 @@ export const translations: Record<Language, TranslationSet> = {
     },
     leaderboard: {
       heading: "Еженедельный рейтинг",
+    },
+    howItWorks: {
+      heading: "Как это работает?",
+      step1Title: "Зарегистрируйтесь",
+      step1Desc: "Оставьте свой email, и мы сообщим вам первыми о запуске",
+      step2Title: "Скачайте приложение",
+      step2Desc: "Загрузите из App Store или Google Play сразу после запуска",
+      step3Title: "Учитесь играя",
+      step3Desc: "Играйте 15 минут в день и начните говорить на английском",
+    },
+    comingSoon: {
+      heading: "Скоро",
+      description: "Мы сейчас работаем над созданием приложения. Запишитесь, чтобы быть в числе первых.",
+      timeline: "Запуск весной 2026",
+    },
+    faq: {
+      heading: "Часто задаваемые вопросы",
+      q1: "EazyEnglish бесплатный?",
+      a1: "Да! Основные функции полностью бесплатны. Премиум-функции будут доступны по подписке.",
+      q2: "Для какого уровня?",
+      a2: "От начального до среднего. Подходит даже для полных новичков.",
+      q3: "Сколько времени в день нужно?",
+      a3: "Всего 15 минут в день достаточно. Короткие уроки, которые вписываются в ваш график.",
+      q4: "Когда запуск?",
+      a4: "Планируется на весну 2026. Запишитесь в лист ожидания — узнаете первыми!",
     },
     subscribe: {
       heading: "Будьте первыми!",
