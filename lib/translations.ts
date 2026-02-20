@@ -104,7 +104,7 @@ export const translations: Record<Language, TranslationSet> = {
     hero: {
       badge: "45M+ O'quvchilar",
       titleLine1: "Ingliz tilini",
-      titleLine2: "o'yin orqali o'rganing",
+      titleLine2: "maroqli o'rganing",
       subtitle: "Bepul. Qiziqarli. Samarali. Kuniga 15 daqiqa",
       cta: "KUTISH RO'YXATIGA QO'SHILISH",
       students: "O'quvchilar",
