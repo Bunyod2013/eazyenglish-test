@@ -32,7 +32,6 @@ import {
   Loader2,
   Clock,
 } from "lucide-react";
-import Image from "next/image";
 
 const LANGUAGES: Language[] = ["uz", "en", "ru"];
 
@@ -463,9 +462,7 @@ export function LandingPage() {
       <header className="sticky top-0 z-50 border-b border-white/20 bg-white/40 backdrop-blur-xl backdrop-saturate-150 shadow-[0_4px_30px_rgba(0,0,0,0.05)]">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-brand text-sm font-bold text-white">
-              <Image src="/eazyenglish-logo.png" alt="EazyEnglish" width={32} height={32} className="rounded-md" />
-            </div>
+            <img src="/eazyenglish-logo.png" alt="EazyEnglish" width={32} height={32} className="h-8 w-8 rounded-md" />
             <span className="text-xl font-bold">
               Eazy<span className="text-brand">English</span>
             </span>
